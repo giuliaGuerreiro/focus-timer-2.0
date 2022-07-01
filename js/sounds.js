@@ -1,3 +1,10 @@
+import {
+  forestSoundInput,
+  rainSoundInput,
+  coffeShopSoundInput,
+  fireplaceSoundInput
+} from "./elements.js"
+
 export default function Sounds() {
 
   const rainSound = new Audio("../audio/rain.wav");
@@ -12,21 +19,25 @@ export default function Sounds() {
   function pressRainButton() {
     rainSound.play();
     rainSound.loop = true;
+    rainSound.volume = rainSoundInput.value;
   }
 
   function pressForestButton() {
     forestSound.play();
     forestSound.loop = true;
+    forestSound.volume = forestSoundInput.value;
   }
 
   function pressCoffeShopButton() {
     coffeeShopSound.play();
     coffeeShopSound.loop = true;
+    coffeeShopSound.volume = coffeShopSoundInput.value;
   }
 
   function pressFireplaceButton() {
     fireplaceSound.play();
     fireplaceSound.loop = true;
+    fireplaceSound.volume = fireplaceSoundInput.value;
   }
 
   function pauseSounds() {
@@ -57,6 +68,7 @@ export default function Sounds() {
     pauseSounds,
     timeEnd, 
     pressButton,
-    pressSound
+    pressSound, 
+    rainSound
   }
 }

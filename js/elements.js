@@ -11,6 +11,10 @@ const secondsDisplay = document.querySelector('.seconds');
 const lightModeButton = document.querySelector('.light-mode-button');
 const darkModeButton = document.querySelector('.dark-mode-button');
 const bodyElement = document.querySelector('body');
+const forestSoundInput = document.querySelector('#forest-volume');
+const rainSoundInput = document.querySelector('#rain-volume');
+const coffeShopSoundInput = document.querySelector('#coffee-shop-volume');
+const fireplaceSoundInput = document.querySelector('#fireplace-volume');
 
 export {
   buttonPlay,
@@ -25,5 +29,9 @@ export {
   secondsDisplay,
   lightModeButton,
   darkModeButton,
-  bodyElement
+  bodyElement,
+  forestSoundInput,
+  rainSoundInput,
+  coffeShopSoundInput,
+  fireplaceSoundInput
 }

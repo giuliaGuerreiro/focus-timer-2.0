@@ -130,6 +130,27 @@ button svg path {
   cursor: pointer;
 }
 
+.volume-range {
+  appearance: none;
+  background: var(--fc-primary);
+  
+  width: 9rem;
+  height: 0.4rem;
+  margin-top: 2rem;
+  
+  border-radius: 5px;
+}
+
+.volume-range::-webkit-slider-thumb {
+  appearance: none;
+  background: var(--fc-primary);
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 18px;
+
+  cursor: pointer;
+}
+
 .col-1 button:nth-child(1) {
   animation: pop 400ms;
 }
@@ -165,6 +186,7 @@ button svg path {
 button:active {
   transform: scale(1.1);
 }
+
 
 @keyframes pop {
   0% {
