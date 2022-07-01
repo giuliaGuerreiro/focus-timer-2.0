@@ -1,4 +1,6 @@
 import Timer from "./timer.js"
+import Controls from "./controls.js"
+import Sounds from "./sounds.js"
 
 import {
   buttonPlay,
@@ -11,54 +13,55 @@ import {
   buttonFireplace
 } from "./elements.js"
 
+const sounds = Sounds()
+
+const controls = Controls({ sounds })
+
 const timer = Timer({
-  resetSoundButton
+  controls,
+  sounds
 })
 
-function resetSoundButton() {
-  buttonRain.classList.remove('active');
-  buttonForest.classList.remove('active');
-  buttonCoffeeShop.classList.remove('active');
-  buttonFireplace.classList.remove('active');
-}
-
+// COLOCAR ALGUMA ANIMAÇÃO
 
 buttonPlay.addEventListener('click', function() {
-  buttonPlay.classList.add('clicked');
   timer.countdown();
+  sounds.pressButton();
 })
 
 buttonStop.addEventListener('click', function() {
   timer.resetTimerDisplay();
-  resetSoundButton();  
-  buttonPlay.classList.remove('clicked');
+  controls.resetSoundButton();
   timer.hold();
+  sounds.pressButton();
 })
 
 buttonIncrease.addEventListener('click', function() {
   timer.increaseMinutes();
+  sounds.pressButton();
 })
 
 buttonDecrease.addEventListener('click', function() {
   timer.decreaseMinutes();
+  sounds.pressButton();
 })
 
 buttonForest.addEventListener('click', function() {
-  resetSoundButton();
-  buttonForest.classList.add('active');
+  controls.active(buttonForest);
+  sounds.pressForestButton();
 })
 
 buttonRain.addEventListener('click', function() {
-  resetSoundButton();
-  buttonRain.classList.add('active');
+  controls.active(buttonRain);
+  sounds.pressRainButton();
 })
 
 buttonCoffeeShop.addEventListener('click', function() {
-  resetSoundButton();
-  buttonCoffeeShop.classList.add('active');
+  controls.active(buttonCoffeeShop);
+  sounds.pressCoffeShopButton();
 })
 
 buttonFireplace.addEventListener('click', function() {
-  resetSoundButton();
-  buttonFireplace.classList.add('active');
+  controls.active(buttonFireplace);
+  sounds.pressFireplaceButton();
 })

@@ -5,26 +5,30 @@ import {
 } from "./elements.js"
 
 export default function Timer({
-resetSoundButton
+controls,
+sounds
 }) {
 
   let timeOutID;
   let minutes = Number(minutesDisplay.textContent);
 
   function countdown() {
+    buttonPlay.classList.add('clicked');
+    
     timeOutID = setTimeout(function() {
       let seconds = Number(secondsDisplay.textContent);
       let minutes = Number(minutesDisplay.textContent);
   
       if(minutes <= 0 && seconds <= 0) {
         resetTimerDisplay();
-        resetSoundButton();
+        controls.resetSoundButton();
         buttonPlay.classList.remove('clicked');
+        sounds.timeEnd();
         return
       }
   
       if(seconds <= 0) {
-        seconds = 2;
+        seconds = 60;
         --minutes;
       }
   
@@ -59,6 +63,7 @@ resetSoundButton
   function resetTimerDisplay() {
     minutesDisplay.textContent = String(minutes).padStart(2, "0");
     secondsDisplay.textContent = String(0).padStart(2, "0");
+    buttonPlay.classList.remove('clicked');
   }
 
   function hold() {
