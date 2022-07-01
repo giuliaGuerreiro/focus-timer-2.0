@@ -12,7 +12,7 @@ export default function Sounds() {
   const coffeeShopSound = new Audio("../audio/coffee-shop.wav");
   const fireplaceSound = new Audio("../audio/fireplace.wav");
   const alarmSound = new Audio("../audio/alarm.mp3")
-  const buttonSound = new Audio("../audio/button.wav")
+  const buttonSound = new Audio("https://github.com/giuliaGuerreiro/focus-timer-2.0/raw/main/audio/button.wav")
   const soundButton = new Audio("../audio/soundButton.wav")
 
 
@@ -68,7 +68,6 @@ export default function Sounds() {
     pauseSounds,
     timeEnd, 
     pressButton,
-    pressSound, 
-    rainSound
+    pressSound
   }
 }
