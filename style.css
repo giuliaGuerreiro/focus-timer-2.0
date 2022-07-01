@@ -49,6 +49,8 @@ body {
 
   display: flex;
   align-items: center;
+
+  animation: blink 700ms;
 }
 
 #controls {
@@ -104,6 +106,22 @@ button svg path {
   cursor: pointer;
 }
 
+.col-1 button:nth-child(1) {
+  animation: pop 400ms;
+}
+
+.col-1 button:nth-child(2) {
+  animation: pop 400ms 100ms backwards;
+}
+
+.col-2 button:nth-child(1) {
+  animation: pop 400ms 200ms backwards;
+}
+
+.col-2 button:nth-child(2) {
+  animation: pop 400ms 300ms backwards;
+}
+
 #music button:hover {
   background-color: var(--bg-sound-light);
 }
@@ -122,6 +140,24 @@ button svg path {
 
 button:active {
   transform: scale(1.1);
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 @media (max-width: 850px) {
