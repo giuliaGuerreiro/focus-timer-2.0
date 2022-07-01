@@ -8,6 +8,9 @@ const buttonCoffeeShop = document.querySelector('.coffee-shop-sound');
 const buttonFireplace = document.querySelector('.fireplace-sound');
 const minutesDisplay = document.querySelector('.minutes');
 const secondsDisplay = document.querySelector('.seconds');
+const lightModeButton = document.querySelector('.light-mode-button');
+const darkModeButton = document.querySelector('.dark-mode-button');
+const bodyElement = document.querySelector('body');
 
 export {
   buttonPlay,
@@ -19,5 +22,8 @@ export {
   buttonCoffeeShop,
   buttonFireplace,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay,
+  lightModeButton,
+  darkModeButton,
+  bodyElement
 }

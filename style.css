@@ -2,10 +2,6 @@
   font-size: 62.5%;
 
   --ff-primary: 'Roboto', sans-serif;
-  --fc-primary: hsla(240, 6%, 21%, 1);
-  --fc-secondary: hsla(240, 9%, 89%, 1);
-  --bg-sound:hsla(194, 97%, 31%, 1);
-  --bg-sound-light: hsla(193, 64%, 41%, 0.534);
   --fs-timer: clamp(8rem, 8rem + 2vw, 12.6rem);
   --bs-controls: clamp(3rem, 3rem + 3vw, 4.8rem);
   --ws-sounds: clamp(10rem, 10rem + 5vw, 13.8rem);
@@ -20,6 +16,20 @@
 
 body {
   font-size: 1.6rem;
+
+  --fc-primary: hsla(240, 6%, 21%, 1);
+  --fc-secondary: hsla(240, 9%, 89%, 1);
+  --bg-sound:hsla(194, 97%, 31%, 1);
+  --bg-sound-light: hsla(193, 64%, 41%, 0.534);
+}
+
+.dark-mode {
+  --fc-primary: hsla(0, 0%, 100%, 1);
+  --fc-secondary: hsla(240, 6%, 17%, 1);
+  --bg-sound:hsla(194, 97%, 31%, 1);
+  --bg-sound-light: hsla(193, 64%, 41%, 0.534);
+
+  background-color: hsla(240, 5%, 7%, 1);
 }
 
 .page {
@@ -30,6 +40,20 @@ body {
   align-items: center;
   justify-content: center;
   gap: 19.2rem;
+}
+
+.theme-color {
+  background: transparent;
+
+  position: fixed;
+  right: 6.4rem;
+  top: 6.4rem;
+
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
 
 #display {

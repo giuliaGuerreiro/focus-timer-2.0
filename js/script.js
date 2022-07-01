@@ -10,7 +10,10 @@ import {
   buttonForest,
   buttonRain,
   buttonCoffeeShop,
-  buttonFireplace
+  buttonFireplace,
+  lightModeButton,
+  darkModeButton,
+  bodyElement
 } from "./elements.js"
 
 const sounds = Sounds()
@@ -22,7 +25,17 @@ const timer = Timer({
   sounds
 })
 
-// COLOCAR ALGUMA ANIMAÇÃO
+lightModeButton.addEventListener('click', function() {
+  lightModeButton.classList.add('hide');
+  darkModeButton.classList.remove('hide');
+  bodyElement.classList.add('dark-mode');
+})
+
+darkModeButton.addEventListener('click', function() {
+  darkModeButton.classList.add('hide');
+  lightModeButton.classList.remove('hide');
+  bodyElement.classList.remove('dark-mode');
+})
 
 buttonPlay.addEventListener('click', function() {
   timer.countdown();
