@@ -7,13 +7,13 @@ import {
 
 export default function Sounds() {
 
-  const rainSound = new Audio("../audio/rain.wav");
-  const forestSound = new Audio("../audio/forest.wav");
-  const coffeeShopSound = new Audio("../audio/coffee-shop.wav");
-  const fireplaceSound = new Audio("../audio/fireplace.wav");
-  const alarmSound = new Audio("../audio/alarm.mp3")
+  const rainSound = new Audio("https://github.com/giuliaGuerreiro/focus-timer-2.0/raw/main/audio/rain.wav");
+  const forestSound = new Audio("https://github.com/giuliaGuerreiro/focus-timer-2.0/raw/main/audio/forest.wav");
+  const coffeeShopSound = new Audio("https://github.com/giuliaGuerreiro/focus-timer-2.0/raw/main/audio/coffee-shop.wav");
+  const fireplaceSound = new Audio("https://github.com/giuliaGuerreiro/focus-timer-2.0/raw/main/audio/fireplace.wav");
+  const alarmSound = new Audio("https://github.com/giuliaGuerreiro/focus-timer-2.0/raw/main/audio/alarm.mp3")
   const buttonSound = new Audio("https://github.com/giuliaGuerreiro/focus-timer-2.0/raw/main/audio/button.wav")
-  const soundButton = new Audio("../audio/soundButton.wav")
+  const soundButton = new Audio("https://github.com/giuliaGuerreiro/focus-timer-2.0/raw/main/audio/soundButton.wav")
 
 
   function pressRainButton() {
