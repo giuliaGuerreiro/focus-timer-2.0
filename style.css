@@ -3,7 +3,7 @@
 
   --ff-primary: 'Roboto', sans-serif;
   --fs-timer: clamp(8rem, 8rem + 2vw, 12.6rem);
-  --bs-controls: clamp(3rem, 3rem + 3vw, 4.8rem);
+  --bs-controls: clamp(4.5rem, 4.5rem + 4vw, 4.8rem);
   --ws-sounds: clamp(10rem, 10rem + 5vw, 13.8rem);
   --hs-sounds: clamp(11rem, 11rem + 5vw, 15.2rem);
 }
@@ -21,6 +21,8 @@ body {
   --fc-secondary: hsla(240, 9%, 89%, 1);
   --bg-sound:hsla(194, 97%, 31%, 1);
   --bg-sound-light: hsla(193, 64%, 41%, 0.534);
+
+  max-height: 100vh;
 }
 
 .dark-mode {
@@ -207,10 +209,25 @@ button:active {
 }
 
 @media (max-width: 850px) {
+
+  :root {
+    --bs-controls: clamp(4.5rem, 4.5rem + 4vw, 5.3rem);
+  }
+
   .page {
     flex-direction: column;
     gap: 10rem;   
     margin: 10rem auto; 
+  }
+
+  .theme-color {
+    right: 2rem;
+    top: 2rem;
+  }
+
+  .theme-color svg {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   #display {
@@ -220,4 +237,6 @@ button:active {
   #controls {
     gap: 1.7rem;
   }
+
+
 }
